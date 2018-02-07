@@ -1,0 +1,23 @@
+---
+title: "Example of inline R code in Markdown document"
+author: "ReprodResearchMan"
+output: html_document  
+---
+***
+# A normal distribution
+***
+We take a sample from a normal distribution
+
+```{r sample}
+set.seed(1212)
+x <- rnorm(n=10)
+```
+
+The mean of our sample is `r mean(x)` and 
+the standard deviation is `r sd(x)`. More examples 
+of neat rmarkdown tricks can be found at the 
+[RStudio website](http://rmarkdown.rstudio.com/lesson-1.html)
+
+```{r plot, echo=FALSE}
+hist(x)
+```
